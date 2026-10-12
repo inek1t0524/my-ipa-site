@@ -1,40 +1,180 @@
-
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Мои приложения</title>
+  <meta name="theme-color" content="#f5f5f7">
+
+  <title>SuperN — установка приложения</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
-      padding: 40px 16px;
+      margin: 0;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+      color: #1d1d1f;
+      background:
+        radial-gradient(circle at top, #ffffff 0%, #f2f3f7 65%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 410px;
       text-align: center;
     }
-    .app {
-      max-width: 360px;
-      margin: auto;
-      padding: 24px;
-      background: white;
-      border-radius: 20px;
+
+    .card {
+      padding: 32px 24px 28px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 28px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.07);
     }
-    a {
-      display: block;
-      background: #087aff;
+
+    .app-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 23px;
+      background: linear-gradient(145deg, #4e8cff, #1655d9);
       color: white;
-      padding: 15px;
-      border-radius: 12px;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -2px;
+      box-shadow: 0 8px 22px rgba(35, 100, 230, 0.25);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 29px;
+      letter-spacing: -0.8px;
+    }
+
+    .subtitle {
+      margin: 10px 0 25px;
+      color: #77777e;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .details {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 25px;
+      color: #77777e;
+      font-size: 12px;
+    }
+
+    .details strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #303036;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .install-button {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 15px;
+      background: #087aff;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 650;
       text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .install-button:hover {
+      background: #0065df;
+      transform: translateY(-1px);
+    }
+
+    .note {
+      margin: 18px 0 0;
+      color: #77777e;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 22px;
+      color: #9999a0;
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 14px;
+      }
+
+      .card {
+        padding: 28px 20px 24px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="app">
-    <h2>Моё приложение</h2>
-    <p>Установка для iPhone</p>
-    <a href="https://github.com/inek1t0524/my-ipa-site/releases/download/v1.0.0/SuperN.ipa" id="install"></a>
-    <p>Открывайте страницу в Safari.</p>
-  </div>
+  <main class="container">
+    <section class="card">
+
+      <div class="app-icon" aria-label="Иконка SuperN">
+        SN
+      </div>
+
+      <h1>SuperN</h1>
+
+      <p class="subtitle">
+        Приложение для iPhone
+      </p>
+
+      <div class="details">
+        <div>
+          <strong>IPA</strong>
+          Формат файла
+        </div>
+
+        <div>
+          <strong>iOS</strong>
+          iPhone и iPad
+        </div>
+      </div>
+
+      <a
+        class="install-button"
+        href="https://github.com/inek1t0524/my-ipa-site/releases/download/v1.0.0/SuperN.ipa"
+      >
+        Скачать приложение
+      </a>
+
+      <p class="note">
+        Для загрузки нажмите кнопку выше.
+        Возможность установки зависит от подписи приложения
+        и совместимости с вашим устройством.
+      </p>
+
+    </section>
+
+    <footer>
+      SuperN · Страница приложения
+    </footer>
+  </main>
 </body>
 </html>
+```
