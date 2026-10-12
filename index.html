@@ -1,12 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f5f7">
-
-  <title>SuperN — установка приложения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0f">
+  <title>SuperN — Установка</title>
 
   <style>
     * {
@@ -16,165 +14,113 @@
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 40px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   sans-serif;
-      color: #1d1d1f;
+      padding: 24px;
       background:
-        radial-gradient(circle at top, #ffffff 0%, #f2f3f7 65%);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 410px;
-      text-align: center;
+        radial-gradient(ellipse at top, #25203d 0%, #111117 45%, #08080b 100%);
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     .card {
-      padding: 32px 24px 28px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(0, 0, 0, 0.06);
+      width: 100%;
+      max-width: 380px;
+      padding: 32px 24px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 28px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
     }
 
-    .app-icon {
-      width: 100px;
-      height: 100px;
+    .icon {
+      width: 88px;
+      height: 88px;
       margin: 0 auto 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 23px;
-      background: linear-gradient(145deg, #4e8cff, #1655d9);
-      color: white;
+      background: linear-gradient(135deg, #a78bfa, #6545d6);
       font-size: 38px;
       font-weight: 800;
-      letter-spacing: -2px;
-      box-shadow: 0 8px 22px rgba(35, 100, 230, 0.25);
+      box-shadow: 0 8px 30px rgba(130, 90, 255, 0.3);
     }
 
     h1 {
-      margin: 0;
+      margin: 0 0 10px;
       font-size: 29px;
-      letter-spacing: -0.8px;
+      letter-spacing: -0.7px;
     }
 
-    .subtitle {
-      margin: 10px 0 25px;
-      color: #77777e;
+    .description {
+      margin: 0 0 26px;
+      color: #b9b7c7;
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    .details {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-bottom: 25px;
-      color: #77777e;
-      font-size: 12px;
-    }
-
-    .details strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #303036;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .install-button {
+    .install {
       display: block;
       width: 100%;
       padding: 16px 20px;
       border-radius: 15px;
-      background: #087aff;
+      background: linear-gradient(135deg, #a78bfa, #7652e8);
       color: #ffffff;
-      font-size: 16px;
-      font-weight: 650;
       text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 7px 24px rgba(130, 90, 255, 0.25);
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .install-button:hover {
-      background: #0065df;
-      transform: translateY(-1px);
+    .install:active {
+      transform: scale(0.98);
     }
 
     .note {
-      margin: 18px 0 0;
-      color: #77777e;
+      margin: 20px 0 0;
+      color: #888697;
       font-size: 12px;
       line-height: 1.6;
     }
 
-    footer {
-      margin-top: 22px;
-      color: #9999a0;
+    .footer {
+      margin-top: 26px;
+      color: #666473;
       font-size: 12px;
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 20px 14px;
-      }
-
-      .card {
-        padding: 28px 20px 24px;
-      }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <section class="card">
+  <main class="card">
+    <div class="icon">S</div>
 
-      <div class="app-icon" aria-label="Иконка SuperN">
-        SN
-      </div>
+    <h1>SuperN</h1>
 
-      <h1>SuperN</h1>
+    <p class="description">
+      Установка приложения на iPhone.
+      Нажми на кнопку ниже, чтобы начать.
+    </p>
 
-      <p class="subtitle">
-        Приложение для iPhone
-      </p>
+    <a
+      class="install"
+      href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Finek1t0524.github.io%2Fmy-ipa-site%2Fmanifest.plist"
+    >
+      Установить приложение
+    </a>
 
-      <div class="details">
-        <div>
-          <strong>IPA</strong>
-          Формат файла
-        </div>
+    <p class="note">
+      Для установки требуется совместимая подпись приложения.
+      Если установка не начинается, проверь сертификат и файл манифеста.
+    </p>
 
-        <div>
-          <strong>iOS</strong>
-          iPhone и iPad
-        </div>
-      </div>
-
-      <a
-        class="install-button"
-        href="itms-services://?action=download-manifest&url=https://inek1t0524.github.io/my-ipa-site/manifest.plist"
-      >
-        Скачать приложение
-      </a>
-
-      <p class="note">
-        Для загрузки нажмите кнопку выше.
-        Возможность установки зависит от подписи приложения
-        и совместимости с вашим устройством.
-      </p>
-
-    </section>
-
-    <footer>
-      SuperN · Страница приложения
-    </footer>
+    <div class="footer">
+      SuperN · iOS
+    </div>
   </main>
 </body>
 </html>
-```
